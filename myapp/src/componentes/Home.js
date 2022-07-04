@@ -1,25 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import NavBar from '../componentes/navBar';
 
 function Home() {
-    return (
-        <div>
-            <main className="HomePag">
-                <div className="Title">
-                    <h1>Desenvolvedor Web</h1>
-                    <h2>Full Stack</h2>
-                </div>
-                <div>
-                    <p className="p">“Programadores e artistas são os únicos profissionais que tem como hobby a própria profissão.” – Rafael Lain</p>
-                </div>
-            </main>
-            <img src="myphoto.png" />
-            <nav>
-                <Link className="link" to="/About">Sobre mim</Link>
-            </nav>
-
+  return (
+    <div>
+      <NavBar />
+      <section id="main">
+        <div class="titleHome">
+          <h1>João Batista</h1>
+          <h2>Desenvolvedor Full Stack</h2>
         </div>
-    )
+        <div>
+          <p class="p">"Programadores e artistas são os únicos profissionais que tem como hobby a própria profissão.” – Rafael Lain</p>
+        </div>
+      </section>
+
+    </div>
+  )
 }
 
 export default Home;

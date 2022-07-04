@@ -1,39 +1,546 @@
-* {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+  background-image: url(./static/img/portfolio-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: center;
+
+  font-family: Ubuntu, Arial, sans-serif;
 }
 
-.App {
-  background-color: black;
-  height: 100vh;
-  max-width: 100%;
-  text-align: center;
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; } 
+  }
+  @-moz-keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1; }
+  }
+  @-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+
+.fadeIn {
+  animation: fadeIn 2s ease-in-out;
+  -webkit-animation: fadeIn 2s ease-in-out;
+  -moz-animation: fadeIn 2s ease-in-out;
+  -o-animation: fadeIn 2s ease-in-out;
+  }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  background: rgba(14, 31, 48, 0.92);
+  overflow-y: auto;
+  width: 215px;
+  transition: all ease-in-out 0.5s;
+  padding: 0 15px;
+  z-index: auto;
 }
 
-.Title {
-  font-family: sans-serif;
-  font-size: 30px;
-  padding: 50px;
-}
-
-.HomePag {
-  padding: 70px;
-  color: rgb(14, 180, 202);
-}
-
-.Foto-home {
-  float: right;
-  width: 15%;
-  padding: 5px;
-  margin: 20px 10px 10px 20px;
+#header .profile img{
+  margin: 15px auto;
+  display: block;
+  width: 85px;
+  border: 8px solid rgb(35, 34, 34);
   border-radius: 50%;
 }
 
-.link {
-  background-color: #18a6be;
-  color: white;
-  padding: 14px 25px;
+#header .profile h1{
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
   text-align: center;
+  color: #fff;
+}
+
+#header .profile .social-links a{
+  font-size: 0.9rem;
+  background: rgb(35, 34, 34);
+  color: #fff;
+  padding: 0.5rem;
+  margin-right: 0.9rem;
+  border-radius: 30%;
+  transition: 0.3s;
   text-decoration: none;
+}
+
+#header .profile .social-links a:hover{
+  background: rgb(34, 128, 169)
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  transition: 0.3s;
+  font-size: 12px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  padding-right: 0.5em;
+  color: #6f7180;
+  font-size: 21px;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+  text-align: none;
+  color: rgb(255, 255, 255);
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i {
+  text-align: none;
+  color: rgb(34, 128, 169);
+}
+
+i.menu-lateral {
+  position: fixed;
+  color: #fff;
+  background: rgba(14, 31, 48, 0.731);
+  top: 1rem;
+  left: 1rem;
+  
+  font-size: 1.5rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-lateral:hover{
+  background: rgb(34, 128, 169);
+  transition: 0.3s;
+}
+
+#main{
+  margin-top: 18%;
+  margin-left: 15%;
+  padding: 40px 50px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.titleHome{
+  margin-bottom: 10px;
   display: inline-block;
+  text-shadow: 2px 5px 5px #000;
+}
+
+.titleHome h1{
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#sobre{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0px 0px 15px #000;
+  margin: 40px 70px 0 70px;
+  padding: 40px;
+  color: rgb(1, 1, 1);
+}
+
+#habilidades {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0px 0px 15px #000;
+  margin: 40px 70px 40px 70px;
+  padding: 40px;
+  color: rgb(1, 1, 1);
+}
+
+#card-master {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.781);
+  color: rgb(1, 1, 1);
+  box-shadow: 10px 7px 12px #000;
+  margin: 10px;
+  padding: 12px;
+  border-radius: 7px;
+}
+
+#card h6 {
+  margin-top: 10px;
+}
+
+#card:hover {
+  box-shadow: 0px 0px 5px #000;
+  transition: 0.3s;
+  
+}
+
+.title-skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  padding: 7px;
+  color: rgb(1, 1, 1);
+}
+
+.soft-Skills {
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 40rem;
+}
+
+.developer-img {
+  position: absolute;
+}
+
+.card-comunicacao {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 140px;
+  left: 200px;
+}
+
+.card-comunicacao:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-criatividade {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 30px;
+}
+
+.card-criatividade:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-empatia {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 140px;
+}
+
+.card-empatia:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-colaboracao {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 205px;
+  left: 50px;
+}
+
+.card-colaboracao:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-negociacao {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 210px;
+  right: 50px;
+}
+
+.card-negociacao:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-resiliencia {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 140px;
+}
+
+.card-resiliencia:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-adaptacao {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  right: 30px;
+}
+
+.card-adaptacao:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.card-organizacao {
+  color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 140px;
+  right: 200px;
+}
+
+.card-organizacao:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 1px 2px 10px black;
+}
+
+.listMaster {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+
+.list-item{
+  padding: 4.3px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menu-nav-active {
+  overflow: hidden;
+}
+
+.menu-nav-active #header {
+  left: 0;
+}
+
+.fecharMenu-active {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: 1s;
+}
+
+@media (max-width: 1124px) {
+  .soft-Skills {
+    
+    justify-content: center;
+    height: 50rem;
+  }
+
+  .developer-img {
+    display: none;
+  }
+
+  .card-comunicacao {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    top: 0px;
+    left: 0px;
+  }
+  
+  .card-criatividade {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    left: 0px;
+  }
+  
+  .card-empatia {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    bottom: 0px;
+  }
+  
+  .card-colaboracao {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .card-negociacao {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    top: 0px;
+    right: 0px;
+  }
+  
+  .card-resiliencia {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    bottom: 0px;
+  }
+  
+  .card-adaptacao {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    right: 0px;
+  }
+  
+  .card-organizacao {
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-shadow: 1px 1.5px 15px rgb(30, 108, 163);
+    top: 0px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #header {
+    left: -300px;
+  }
+  i.menu-lateral {
+    display: flex;
+  }
+  section.Section h2 {
+    font-size: 2.5rem;
+  }
+  #main {
+    margin-left: 0;
+  }
+  .img-joao {
+    width: 100%;
+  }
+  #sobre{
+    margin: 20px;
+    padding: 27px 80px 0 80px;
+  }
+  #habilidades {
+    margin: 20px;
+    padding: 27px 155px 0 155px;
+  }
+  #card-master {
+    flex-direction: column;
+  }
+  i.menu-lateral {
+    margin: 13px;
+  }
+}
+
+@media (max-width: 694px) {
+  .soft-Skills {
+    height: 74rem;
+  }
 }
