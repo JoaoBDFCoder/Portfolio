@@ -3,9 +3,9 @@ import NavBar from '../componentes/navBar';
 
 function Home() {
   return (
-    <div>
+    <div id="main">
       <NavBar />
-      <section id="main">
+      <section className="max-width">
         <div class="titleHome">
           <h1>João Batista</h1>
           <h2>Desenvolvedor Full Stack</h2>

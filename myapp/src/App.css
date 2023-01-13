@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import '@splidejs/splide/css/skyblue';
 
 body{
   background-image: url(./static/img/portfolio-background.jpg);
@@ -135,11 +136,14 @@ i.menu-lateral {
 }
 
 #main{
-  margin-top: 18%;
-  margin-left: 15%;
-  padding: 40px 50px;
+  height: 100vh;
+  padding: 50px;
   text-decoration: none;
   color: #fff;
+}
+
+#main .max-width{
+  margin: 300px 0 0 100px;
 }
 
 .titleHome{
@@ -159,22 +163,32 @@ i.menu-lateral {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.781);
-  box-shadow: 0px 0px 15px #000;
-  margin: 40px 70px 0 70px;
-  padding: 40px;
-  color: rgb(1, 1, 1);
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.458);
+  padding: 50px;
+  height: 100vh;
+  font-weight: 500;
 }
 
 #habilidades {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.781);
-  box-shadow: 0px 0px 15px #000;
-  margin: 40px 70px 40px 70px;
+  font-weight: 500;
+  padding: 70px;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.458);
+}
+
+#projetos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 40px;
-  color: rgb(1, 1, 1);
+  height: 100%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.458);
 }
 
 #card-master {
@@ -191,7 +205,7 @@ i.menu-lateral {
   width: 100px;
   background-color: rgba(255, 255, 255, 0.781);
   color: rgb(1, 1, 1);
-  box-shadow: 10px 7px 12px #000;
+  box-shadow: 4px 7px 4px rgba(0, 0, 0, 0.912);
   margin: 10px;
   padding: 12px;
   border-radius: 7px;
@@ -202,9 +216,8 @@ i.menu-lateral {
 }
 
 #card:hover {
-  box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 2px #000;
   transition: 0.3s;
-  
 }
 
 .title-skills {
@@ -223,6 +236,7 @@ i.menu-lateral {
 
 .soft-Skills {
   margin-top: 100px;
+  margin-bottom: -5%;
 }
 
 .container {
@@ -283,7 +297,7 @@ i.menu-lateral {
   color: black;
   transition: 0.5s;
   transform: scale(1.1);
-  text-shadow: 1px 2px 10px black;
+  text-shadow: 1px 2px 10px rgb(0, 0, 0);
 }
 
 .card-colaboracao {
@@ -401,6 +415,153 @@ li {
   left: 0;
   display: block;
   transition: 1s;
+}
+
+.main-projetos {
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.content-projetos {
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  margin-top: 1rem;
+}
+
+.img-projetos {
+  width: 30rem;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.content-certificados {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+
+.content {
+  height: 510px;
+  width: 935px;
+  border-radius: 26px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.img-certificados {
+  height: 510px;
+  width: 935px;
+  padding-right: 3px;
+}
+
+.bar-navigation {
+  color: rgb(255, 255, 255);
+  padding: 1px 3px;
+  margin-right: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.bar-navigation:hover {
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+  border: 2px solid rgba(255, 255, 255, 0.211);
+  border-radius: 7px;
+  background-color: rgb(34, 128, 169);
+}
+
+.input-slide {
+  display: none;
+}
+
+#certificados {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.059);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3%;
+  height: 100vh;
+  font-weight: 500;
+}
+
+#certificados h1{
+  color: #fff;
+  text-shadow: 2px 5px 5px #000;
+}
+
+.slide {
+  width: 20%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+#slide5:checked ~ .s1 {
+  margin-left: -80%;
+}
+
+#contato {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.458);
+  padding: 50px;
+  height: 100vh;
+  font-weight: 500;
+}
+
+.master-contato {
+  display: flex;
+  padding-top: 3%;
+}
+
+#endereco {
+  background-color: rgb(255, 255, 255);
+}
+
+#forms-contato {
+  margin-left: 2%;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-contato {
+  color: rgb(255, 255, 255);
+  background: rgba(14, 31, 48, 0.731);
+  margin-right: 1rem;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 7px;
+}
+
+.btn-contato:hover {
+  background: rgb(34, 128, 169);
+  transition: 0.5s;
+  border-radius: 7px;
 }
 
 @media (max-width: 1124px) {

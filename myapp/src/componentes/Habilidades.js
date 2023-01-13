@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../componentes/navBar';
 import imgdeveloper from '../static/img/developer-brainstorm.png';
-import Comunication from '../static/img/Comunication.png';
+import Comunication from '../static/img/Comunication2.png';
 import Criativity from '../static/img/Criativity.png';
 import Empathy from '../static/img/Empathy.png';
 import Colaboration from '../static/img/Colaboration.png';
@@ -18,7 +18,7 @@ function Habilidades() {
         <div>
           <div class="col-md-12">
             <h2 class="pt-5">Habilidades</h2>
-            <p style={{ fontSize: '20px' }}>Mesmo tendo pouco tempo de estrada, consegui adquirir habilidades com essas ferramentas, desenvolvendo desde projetos de porte pequeno a grande.</p>
+            <p style={{ fontSize: '20px' }}>Mesmo tendo pouco tempo de estrada, consegui adquirir habilidades com essas ferramentas, desenvolvendo desde projetos de pequeno a grande porte.</p>
           </div>
 
           <div id="card-master">
@@ -88,7 +88,7 @@ function Habilidades() {
               <div class="container">
 
                 <div class="card-comunicacao">
-                  <img src={Comunication} style={{ width: '100px' }} alt="imagem icon HTML5" />
+                  <img class="img-" src={Comunication} style={{ width: '100px' }} alt="imagem icon HTML5" />
                   <h6>Comunicação</h6>
                 </div>
 
