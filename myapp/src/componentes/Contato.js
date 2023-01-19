@@ -9,7 +9,8 @@ class Contato extends Component {
     this.state = {
       nome: '',
       email: '',
-      mensagem: ''
+      mensagem: '',
+      loading: false,
     };
   }
 
@@ -44,20 +45,21 @@ class Contato extends Component {
       html: `<p>${mensagem} </p>`
     };
 
+    this.setState({ loading: true })
     axios.post('/api/send-email', message)
       .then(response => {
-        this.setState({ messageSent: true });
+        this.setState({ loading: false });
         alert("Mensagem enviada com sucesso:");
         this.clearForm();
       })
       .catch(error => {
-        this.setState({ error: true });
+        this.setState({ error: true, loading: false });
         alert("Error:", error);
       });
   }
 
   render() {
-    const { nome, email, mensagem } = this.state;
+    const { nome, email, mensagem, loading } = this.state;
     return (
       <div>
         <NavBar />
@@ -71,13 +73,31 @@ class Contato extends Component {
             <div id="endereco" class="col-md-5">
               <div class="p-4 shadow border-0">
 
-                <div className="email">
-                  <h4>
-                    <i className="bi bi-envelope"></i> Email:</h4>
-                  <p>joaobdf@hotmail.com</p>
+                <div className="info-contato">
+                  <div className="email">
+                    <h5>
+                      <i className="bi bi-envelope"></i> Email:</h5>
+                    <p>joaobdf@hotmail.com</p>
+                  </div>
+                  <div className="social-links-contato">
+                    <h5>Redes sociais:</h5>
+                    <a target="_blank" href="https://www.linkedin.com/in/jo%C3%A3o-batista-6509511ab/" rel="noreferrer">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/JoaoBDFCoder" rel="noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/joaobdf/" rel="noreferrer">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                    <a target="_blank" href="https://web.whatsapp.com/send?phone=5535991667103&text=Ol%C3%A1%20Jo%C3%A3o!" rel="noreferrer">
+                      <i class="bi bi-whatsapp"></i>
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h4><i className="bi bi-geo-alt"></i> Localização:</h4>
+                
+                <div className='localizacao'>
+                  <h5><i className="bi bi-geo-alt"></i> Localização:</h5>
                   <p>Três Corações, MG</p>
                 </div>
 
@@ -102,7 +122,7 @@ class Contato extends Component {
                   <textarea class="form-control" name='mensagem' onChange={this.handleChange} value={mensagem} placeholder='Digite sua mensagem' id="mensagem" rows="12"></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-center">
-                  <button type="submit" onClick={this.handleSubmit} className="btn-contato">Enviar Mensagem</button>
+                  <button type="submit" onClick={this.handleSubmit} className="btn-contato" disabled={loading} >{loading ? 'Enviando...' : 'Enviar Mensagem'}</button>
                 </div>
               </form>
             </div>

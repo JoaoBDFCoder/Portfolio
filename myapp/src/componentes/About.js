@@ -7,16 +7,12 @@ function About() {
     <div>
       <NavBar />
       <section class="Section" id="sobre">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="pt-5">Sobre</h2>
-            <p>
-              Programador web do sul de Minas Gerais, ambicioso, sonhador, com habilidades e experiência trabalhando com desenvolvimento de sistemas e sites. Formado na escola de programação Trybe, pude aprender e me apaixonar por essa profissão que molda o futuro do mundo usando a magia dos códigos.
-            </p>
-            <p>
-              Um ponto forte é a comunicação; construir relacionamentos fortes com as pessoas para entregar os melhores resultados.
-            </p>
-          </div>
+
+        <div className="texto-sobre">
+          <h2>Sobre</h2>
+          <p>
+            Sou um programador web do sul de Minas Gerais com grandes ambições e sonhos. Possuo habilidades e experiência no desenvolvimento de sistemas e sites, sendo uma paixão cultivada durante minha formação na escola de programação Trybe. Acredito que essa profissão molda o futuro do mundo através da magia dos códigos. Além disso, sou um comunicador eficaz, sendo capaz de construir relacionamentos fortes com as pessoas para entregar os melhores resultados. Estou sempre buscando novos desafios e oportunidades para crescer e evoluir como profissional.
+          </p>
         </div>
 
         <div class="row">
@@ -25,7 +21,7 @@ function About() {
           </div>
           <div class="col-md-8">
             <h3>Desenvolvedor de Software</h3>
-            <p>Trabalhando em projetos pessoais e freelances, obtendo experiência para agregar em projetos de empresas com demandas maiores, sempre desafiando meus conhecimentos.</p>
+            <p>Como programador web, tenho aproveitado minhas habilidades e conhecimentos através da execução de projetos pessoais e trabalhos freelancer. Isso tem me permitido adquirir experiência valiosa, preparando-me para lidar com projetos de maior escala e demanda em empresas. Estou sempre buscando desafios que possam me desafiar e aprimorar meus conhecimentos, visando o crescimento profissional contínuo.</p>
 
             <div class="row mt-3 mb-4 listMaster">
               <div class="list">

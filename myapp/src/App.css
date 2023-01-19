@@ -161,13 +161,20 @@ i.menu-lateral {
 
 #sobre{
   display: flex;
-  align-items: center;
   flex-direction: column;
   color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.458);
+  background-color: rgba(255, 255, 255, 0.633);
   padding: 50px;
   height: 100vh;
   font-weight: 500;
+}
+
+.texto-sobre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #habilidades {
@@ -562,6 +569,39 @@ li {
   background: rgb(34, 128, 169);
   transition: 0.5s;
   border-radius: 7px;
+}
+
+.social-links-contato {
+  margin-bottom: 3%;
+}
+
+.social-links-contato a{
+  font-size: 0.9rem;
+  background: rgb(35, 34, 34);
+  color: #fff;
+  padding: 0.4rem;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-right: 0.9rem;
+  border-radius: 30%;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-links-contato a:hover{
+  background: rgba(34, 129, 169, 0)
+}
+
+.info-contato {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.localizacao {
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1124px) {
