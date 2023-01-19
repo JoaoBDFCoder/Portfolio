@@ -16,7 +16,7 @@ function Certificados() {
 
       <section id="certificados">
 
-        <h1>Certificados</h1>
+        <h1 class="pt-5">Certificados</h1>
 
         <div className="content">
           <div className="content-certificados">

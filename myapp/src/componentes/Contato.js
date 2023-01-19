@@ -66,7 +66,7 @@ class Contato extends Component {
 
         <section id="contato">
 
-          <h1>Contato</h1>
+          <h1 class="pt-5">Contato</h1>
 
           <div className="master-contato">
 

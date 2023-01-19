@@ -188,16 +188,6 @@ i.menu-lateral {
   background-color: rgba(255, 255, 255, 0.458);
 }
 
-#projetos {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 40px;
-  height: 100%;
-  color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.458);
-}
-
 #card-master {
   display: flex;
   flex-direction: column;
@@ -424,24 +414,39 @@ li {
   transition: 1s;
 }
 
+#projetos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.633);
+}
+
 .main-projetos {
   width: 100%;
   justify-content: flex-start;
   margin-top: 30px;
-  margin-left: 50px;
 }
 
 .content-projetos {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 20rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  margin-left: 20px;
+  margin-bottom: 3rem;
 }
 
 .img-projetos {
-  width: 30rem;
-  height: 100%;
+  height: 80%;
   margin-right: 1rem;
+}
+
+.text-projeto {
+  width: 100%;
+  text-align: center;
 }
 
 .content-certificados {
@@ -606,7 +611,6 @@ li {
 
 @media (max-width: 1124px) {
   .soft-Skills {
-    
     justify-content: center;
     height: 50rem;
   }
@@ -715,21 +719,13 @@ li {
   i.menu-lateral {
     display: flex;
   }
-  section.Section h2 {
-    font-size: 2.5rem;
-  }
   #main {
     margin-left: 0;
   }
-  .img-joao {
-    width: 100%;
-  }
   #sobre{
-    margin: 20px;
     padding: 27px 80px 0 80px;
   }
   #habilidades {
-    margin: 20px;
     padding: 27px 155px 0 155px;
   }
   #card-master {
@@ -737,6 +733,33 @@ li {
   }
   i.menu-lateral {
     margin: 13px;
+  }
+}
+
+@media (max-width: 826px) {
+  .text-projeto {
+    font-size: 80%;
+  }
+  .content-projetos {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #sobre{
+    margin: 1px;
+    padding: 27px 150px 0 80px;
+    height: 100%;
+  }
+  .content-projetos {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 0px;
+  }
+  .text-projeto {
+    font-size: 100%;
+    width: 100%;
   }
 }
 
