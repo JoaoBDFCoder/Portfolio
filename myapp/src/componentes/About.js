@@ -9,7 +9,7 @@ function About() {
       <section class="Section" id="sobre">
 
         <div className="texto-sobre">
-          <h1 class="pt-5">Sobre</h1>
+          <h1 class="pt-3">Sobre</h1>
           <p>
             Sou um programador web do sul de Minas Gerais com grandes ambições e sonhos. Possuo habilidades e experiência no desenvolvimento de sistemas e sites, sendo uma paixão cultivada durante minha formação na escola de programação Trybe. Acredito que essa profissão molda o futuro do mundo através da magia dos códigos. Além disso, sou um comunicador eficaz, sendo capaz de construir relacionamentos fortes com as pessoas para entregar os melhores resultados. Estou sempre buscando novos desafios e oportunidades para crescer e evoluir como profissional.
           </p>
@@ -17,7 +17,7 @@ function About() {
 
         <div class="row">
           <div class="col-md-4">
-            <img class="img-fluid" src={foto} alt="Foto do João" />
+            <img class="img-fluid width={100px}" src={foto} alt="Foto do João" />
           </div>
           <div class="col-md-8">
             <h3>Desenvolvedor de Software</h3>

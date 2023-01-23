@@ -66,7 +66,7 @@ class Contato extends Component {
 
         <section id="contato">
 
-          <h1 class="pt-5">Contato</h1>
+          <h1 class="pt-3">Contato</h1>
 
           <div className="master-contato">
 
@@ -95,7 +95,7 @@ class Contato extends Component {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className='localizacao'>
                   <h5><i className="bi bi-geo-alt"></i> Localização:</h5>
                   <p>Três Corações, MG</p>
