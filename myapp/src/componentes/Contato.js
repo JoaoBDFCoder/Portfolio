@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import NavBar from '../componentes/navBar';
 import axios from 'axios';
 
+const apiURL = process.env.REACT_APP_API_URL;
+
 class Contato extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +48,7 @@ class Contato extends Component {
     };
 
     this.setState({ loading: true })
-    axios.post('/api/send-email', message)
+    axios.post(`${apiURL}/api/send-email`, message)
       .then(response => {
         this.setState({ loading: false });
         alert("Mensagem enviada com sucesso:");
