@@ -4,11 +4,9 @@ const nodemailer = require('nodemailer');
 
 const app = express()
 app.use(bodyParser.json());
-const port = 3030
+const port = process.env.PORT || 3030;
 
 app.post('/api/send-email', (req, res) => {
-  const formData = req.body
-  console.log(formData);
 
   const transporter = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
