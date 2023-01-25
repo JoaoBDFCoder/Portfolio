@@ -5,7 +5,10 @@ const cors = require('cors');
 
 const app = express()
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://portfolio-servidor.vercel.app'
+}));
+
 const port = process.env.PORT || 3030;
 
 app.post('/api/send-email', (req, res) => {
