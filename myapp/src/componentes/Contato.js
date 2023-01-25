@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import NavBar from '../componentes/navBar';
-import axios from 'axios';
-
-const apiURL = 'https://portfolio-servidor.vercel.app/';
 
 class Contato extends Component {
   constructor(props) {
@@ -46,18 +43,12 @@ class Contato extends Component {
       text: `Mensagem enviada por: ${nome}\nConteúdo da mensagem: ${mensagem}`,
       html: `<p>${mensagem} </p>`
     };
+    console.log(message);
 
     this.setState({ loading: true })
-    axios.post(apiURL, message)
-      .then(response => {
         this.setState({ loading: false });
         alert("Mensagem enviada com sucesso:");
         this.clearForm();
-      })
-      .catch(error => {
-        this.setState({ error: true, loading: false });
-        alert("Error:", error);
-      });
   }
 
   render() {
