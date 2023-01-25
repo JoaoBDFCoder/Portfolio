@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express()
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://meuportfolio-rouge.vercel.app/'
+  origin: 'https://meuportfolio-rouge.vercel.app'
 }));
 
 const port = process.env.PORT || 3030;
