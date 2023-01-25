@@ -10,8 +10,9 @@ app.use(cors({
   origin: 'https://meuportfolio-rouge.vercel.app'
 }));
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://meuportfolio-rouge.vercel.app');
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://meuportfolio-rouge.vercel.app");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
