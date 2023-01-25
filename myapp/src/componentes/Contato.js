@@ -48,7 +48,7 @@ class Contato extends Component {
     };
 
     this.setState({ loading: true })
-    axios.post(`${apiURL}/api/send-email`, message)
+    axios.post(apiURL, message)
       .then(response => {
         this.setState({ loading: false });
         alert("Mensagem enviada com sucesso:");
