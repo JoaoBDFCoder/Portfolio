@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../componentes/navBar';
 import axios from 'axios';
 
-const apiURL = process.env.REACT_APP_API_URL;
+const apiURL = 'https://portfolio-servidor.vercel.app/';
 
 class Contato extends Component {
   constructor(props) {
