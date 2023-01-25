@@ -5,9 +5,15 @@ const cors = require('cors');
 
 const app = express()
 app.use(bodyParser.json());
+
 app.use(cors({
   origin: 'https://meuportfolio-rouge.vercel.app'
 }));
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://meuportfolio-rouge.vercel.app');
+  next();
+});
 
 const port = process.env.PORT || 3030;
 
