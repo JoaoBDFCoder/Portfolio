@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import imgprojeto from '../static/img-projetos/telawow.png'
+import imgprojetoloading from '../static/img-projetos/loading.png'
 import NavBar from '../componentes/navBar';
 
 function Projetos() {
@@ -26,7 +26,7 @@ function Projetos() {
         </div>
         <div className="main-projetos">
           <div className="content-projetos">
-            <img class="img-fluid" src={imgprojeto} alt="imagem projeto" className="img-projetos" />
+            <img class="img-fluid" src={imgprojetoloading} alt="imagem projeto" className="img-projetos" />
             <div className="text-projeto">
               <h3>Tela de Login</h3>
               <p>O projeto é uma tela de login e cadastro inspirada na tela de login do World of Warcraft: Shadowlands, desenvolvida com ReactJS, HTML, CSS, e segue boas práticas de desenvolvimento web e segurança.</p>
@@ -37,7 +37,7 @@ function Projetos() {
             </div>
           </div>
           <div className="content-projetos">
-            <img class="img-fluid" src={imgprojeto} alt="imagem projeto" className="img-projetos" />
+            <img class="img-fluid" src={imgprojetoloading} alt="imagem projeto" className="img-projetos" />
             <div className="text-projeto">
               <h3>Controle de finanças</h3>
               <p>Em resumo, o projeto é uma tela de login inspirada na tela de login do World of Warcraft: Shadowlands, desenvolvida com ReactJS, HTML, CSS, e segue boas práticas de desenvolvimento web e segurança.</p>
@@ -48,7 +48,7 @@ function Projetos() {
             </div>
           </div>
           <div className="content-projetos">
-            <img class="img-fluid" src={imgprojeto} alt="imagem projeto" className="img-projetos" />
+            <img class="img-fluid" src={imgprojetoloading} alt="imagem projeto" className="img-projetos" />
             <div className="text-projeto">
               <h3>Weather App</h3>
               <p>Weather App é um projeto desenvolvido com ReactJS, HTML e CSS, que permite ao usuário ver as condições climáticas de qualquer cidade do mundo. Ele consome dados de outras APIs para trazer informações precisas sobre temperatura, umidade, pressão atmosférica, velocidade do vento, entre outras informações relacionadas ao clima.</p>
@@ -59,7 +59,7 @@ function Projetos() {
             </div>
           </div>
           <div className="content-projetos">
-            <img class="img-fluid" src={imgprojeto} alt="imagem projeto" className="img-projetos" />
+            <img class="img-fluid" src={imgprojetoloading} alt="imagem projeto" className="img-projetos" />
             <div className="text-projeto">
               <h3>App de mobilidade urbana</h3>
               <p>Um app de transporte de passageiros, onde pessoas poderão chamar carros, obter o preço, distância e outras informações, motoristas poderão aceitar corridas. Usando as melhores tecnologias do mercado como React, Node, MongoDB, Redux, APIs do Google Maps, Socket.io para tempo real e o Gateway de Pagamento do Pagar.me.</p>
@@ -70,7 +70,7 @@ function Projetos() {
             </div>
           </div>
           <div className="content-projetos">
-            <img class="img-fluid" src={imgprojeto} alt="imagem projeto" className="img-projetos" />
+            <img class="img-fluid" src={imgprojetoloading} alt="imagem projeto" className="img-projetos" />
             <div className="text-projeto">
               <h3>Marketplace</h3>
               <p>Em resumo, o projeto é uma tela de login inspirada na tela de login do World of Warcraft: Shadowlands, desenvolvida com ReactJS, HTML, CSS, e segue boas práticas de desenvolvimento web e segurança.</p>
@@ -81,7 +81,7 @@ function Projetos() {
             </div>
           </div>
           <div className="content-projetos">
-            <img class="img-fluid" src={imgprojeto} alt="imagem projeto" className="img-projetos" />
+            <img class="img-fluid" src={imgprojetoloading} alt="imagem projeto" className="img-projetos" />
             <div className="text-projeto">
               <h3>Clone NetFlix</h3>
               <p>Em resumo, o projeto é uma tela de login inspirada na tela de login do World of Warcraft: Shadowlands, desenvolvida com ReactJS, HTML, CSS, e segue boas práticas de desenvolvimento web e segurança.</p>
